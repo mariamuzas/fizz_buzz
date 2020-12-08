@@ -15,7 +15,7 @@ function App() {
       } else if (number % 3 === 0){
         setResult("Fizz")
       } else {
-        setResult("")
+        setResult(number)
       }
     }, [number])
 
@@ -31,13 +31,12 @@ function App() {
     }
   
     return (
-      <div>
+      <div className= "App">
         <button value={number} onClick={handleInc}> + </button>
   
         <button value={number} onClick={handleDec}> - </button>
   
-        <h2> Number is {number}</h2>
-        <p>{result}</p>
+        <h2> {result}</h2>
       </div>
     )
   }
