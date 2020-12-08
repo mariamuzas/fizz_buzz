@@ -6,7 +6,6 @@ function App() {
   
     const [number, setNumber] = useState(1);
     const [result, setResult] = useState("");
-  
 
     useEffect(() => {
       if(number % 15 === 0){
@@ -26,7 +25,9 @@ function App() {
     }
   
     const handleDec = () => {
-      setNumber(number - 1);
+      if (number > 1){
+        setNumber(number - 1);
+      }
     }
   
     return (
